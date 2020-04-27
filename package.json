@@ -1,0 +1,14 @@
+{
+  "name": "tienda",
+  "version": "0.0.0",
+  "description": "Data managment for finite-state machine",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fernandez Bortolas Matias",
+  "license": "MIT",
+  "dependencies": {
+    "rxjs": "^6.5.5"
+  }
+}
