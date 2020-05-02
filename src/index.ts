@@ -13,21 +13,21 @@
     2) I don like the "makeStateUnmutable" method. Why calling it every time dispatchAction is called?
 */
 
-type Reducer<T> = (state: T) => T;
+export type Reducer<T> = (state: T) => T;
 
-interface ITienda<T extends object> {
+export interface ITienda<T extends object> {
     dispatchAction(reducer: Reducer<T>): void;
     state: T;
-} 
+}
 
 export class Tienda<T extends object> implements ITienda<T> {
     private _state: T;
 
-    constructor(state: T) { 
-        this._state = state; 
+    constructor(state: T) {
+        this._state = state;
         this.makeStateUnmutable();
     }
-    
+
     public get state() { return this._state; }
 
     public dispatchAction(reducer: Reducer<T>): void {
